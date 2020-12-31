@@ -1,7 +1,7 @@
 Seetree Home Assignment
 __________________________________
 Clone the Repository
-git clone https://github.com/mohamaddiwany/seetree-homework
+git clone https://github.com/mohamaddiwany/seetree-homework.git
 
 open Command Prompt and go to the file location then tap flask run
 
