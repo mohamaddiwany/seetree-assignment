@@ -7,7 +7,7 @@ min,max,mean values etc
 ## Common setup
 Clone the repo and install the dependencies.
 ```bash
-git clone https://github.com/mohamaddiwany/seetree-homework.git
+git clone https://github.com/mohamaddiwany/seetree-assignment.git
 ```
 
 ## Usage - By Flask
@@ -18,6 +18,9 @@ py -m pip install -r requirements.txt
 set FLASK_APP=seetree.py
 flask run
 ```
+Go over the [localhost](https://127.0.0.0:5000) with port 5000 because flask run with that port
+From there you can go to home page and navigate by choosing pictures and functions or use the url
+/health: will respond with “OK” to any request.
 ## Usage - By Docker
 
 open Command Prompt and go to the file location then tap
@@ -28,10 +31,9 @@ that's will build the docker image for you then tap
 ```bash
 docker run -d -p 80:80 seetree
 ```
+Go over the [localhost](https://127.0.0.0)
 ## Work
-Go over the [localhost](https://127.0.0.0:5000) with port 5000 because flask run with that port
-From there you can go to home page and navigate by choosing pictures and functions or use the url
-/health: will respond with “OK” to any request.
+
 
 /stats/IMAGE_FILE_NAME/FUNC_NAME : will calculate FUNC_NAME on the
 pixels of given IMAGE_FILE_NAME and return the result.
