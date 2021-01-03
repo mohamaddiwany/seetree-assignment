@@ -27,6 +27,7 @@ open Command Prompt and go to the file location then tap
 docker build -t seetree .
 ```
 that's will build the docker image for you then tap
+notice: a docker demon must be running before building the image
 ```bash
 docker run -d -p 5000:5000 seetree
 ```
