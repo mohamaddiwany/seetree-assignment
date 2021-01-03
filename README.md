@@ -10,15 +10,42 @@ Clone the repo and install the dependencies.
 git clone https://github.com/mohamaddiwany/seetree-homework.git
 ```
 
+## Usage - By Flask
+
 open Command Prompt and go to the file location then tap 
-
+```bash
+py -m pip install -r requirements.txt
 set FLASK_APP=seetree.py
-
 flask run
+```
+## Usage - By Docker
 
-you may have to install a lot of package using command prompt like apt install flask , PIL , numpy ,and urllib
+open Command Prompt and go to the file location then tap
+```bash
+docker build -t seetree .
+```
+that's will build the docker image for you then tap
+```bash
+docker run -d -p 80:80 seetree
+```
+## Work
+Go over the [localhost](https://127.0.0.0:5000) with port 5000 because flask run with that port
+From there you can go to home page and navigate by choosing pictures and functions or use the url
+/health: will respond with “OK” to any request
+/stats/IMAGE_FILE_NAME/FUNC_NAME : will calculate FUNC_NAME on the
+pixels of given IMAGE_FILE_NAME and return the result. Supported
+FUNC_NAMES should be:
+i. min
+ii. max
+iii. mean
+iv. median
+v. pXXX where XXX is a percentile between 0...100. For example p10 is the
+10th percentile of the image, p99 is the 99th percentile
+All the images that should be supported are stored in a bucket named :
+seetree-demo-open .
+Currently there are 10 images in this bucket named IMG_1.jpg, IMG_2.jpg …
+IMG_10.jpg. 
 
-after that : Open your Web Browser and navigate to http://127.0.0.1:5000/.
 
 
 
