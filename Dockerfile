@@ -4,4 +4,4 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["seetree.py"]
-EXPOSE 80
+EXPOSE 5000
