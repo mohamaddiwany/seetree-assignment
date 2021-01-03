@@ -33,11 +33,12 @@ docker run -d -p 80:80 seetree
 ```
 Go over the [localhost](https://127.0.0.0)
 ## Work
-
+/health : will respond with “OK” to any request
 
 /stats/IMAGE_FILE_NAME/FUNC_NAME : will calculate FUNC_NAME on the
 pixels of given IMAGE_FILE_NAME and return the result.
 Supported FUNC_NAMES should be:
+
 i. min
 
 ii. max
