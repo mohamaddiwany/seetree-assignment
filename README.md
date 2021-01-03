@@ -76,3 +76,5 @@ c. Request to /stats/IMG_100.jpg/min should respond with 404 error code
 (assuming such image was not added to the bucket).
 
 
+## Bonus :
+I made a dictionary that save the Images data , this would help if i go another time to check the same image , i don't have to wait until all the image processing done and that will save our time
