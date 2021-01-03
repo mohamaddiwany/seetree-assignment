@@ -1,7 +1,14 @@
 # Seetree Home Assignment
-__________________________________
-Clone the Repository
+Image statistics are common features in AI applications.
+In the following assignment we are implemented a web server that handles
+calculation of image statistics. For example, given an image we would like to calculate the
+min,max,mean values etc
+
+## Common setup
+Clone the repo and install the dependencies.
+```bash
 git clone https://github.com/mohamaddiwany/seetree-homework.git
+```
 
 open Command Prompt and go to the file location then tap 
 
