@@ -19,8 +19,7 @@ set FLASK_APP=seetree.py
 flask run
 ```
 Go over the [localhost](https://127.0.0.0:5000) with port 5000 because flask run with that port
-From there you can go to home page and navigate by choosing pictures and functions or use the url
-/health: will respond with “OK” to any request.
+
 ## Usage - By Docker
 
 open Command Prompt and go to the file location then tap
@@ -29,10 +28,11 @@ docker build -t seetree .
 ```
 that's will build the docker image for you then tap
 ```bash
-docker run -d -p 80:80 seetree
+docker run -d -p 5000:5000 seetree
 ```
-Go over the [localhost](https://127.0.0.0)
+Go over the [localhost](https://127.0.0.0:5000)
 ## Work
+
 /health : will respond with “OK” to any request
 
 /stats/IMAGE_FILE_NAME/FUNC_NAME : will calculate FUNC_NAME on the
@@ -54,6 +54,16 @@ All the images that should be supported are stored in a bucket named :
 seetree-demo-open .
 Currently there are 10 images in this bucket named IMG_1.jpg, IMG_2.jpg …
 IMG_10.jpg. 
+
+## Extra
+You can open the [localhost](https://127.0.0.0:5000) , there you can see 
+a site with seetree video on it , besides a links to my social media accounts
+if you select the home button then it will navigate to a site where you can 
+choose which picture you want to work on and which function you want to apply
+I didn't put a button for percintle function because i would use post to get which number the put after p while we should only use get
+
+## What you should know about functions
+I choose to returns the value which display three bands for that you will have three answers for some method , I could transform the picture to grayscale but then I think I lost the Imagestats for RGB image cause in real world we have RGB pictures rather than grayscales which we used to have in the past 
 
 ## Examples
 a. Request to /stats/IMG_1.jpg/min should respond with the correct min value in the
