@@ -31,16 +31,22 @@ docker run -d -p 80:80 seetree
 ## Work
 Go over the [localhost](https://127.0.0.0:5000) with port 5000 because flask run with that port
 From there you can go to home page and navigate by choosing pictures and functions or use the url
-/health: will respond with “OK” to any request
+/health: will respond with “OK” to any request.
+
 /stats/IMAGE_FILE_NAME/FUNC_NAME : will calculate FUNC_NAME on the
-pixels of given IMAGE_FILE_NAME and return the result. Supported
-FUNC_NAMES should be:
+pixels of given IMAGE_FILE_NAME and return the result.
+Supported FUNC_NAMES should be:
 i. min
+
 ii. max
+
 iii. mean
+
 iv. median
+
 v. pXXX where XXX is a percentile between 0...100. For example p10 is the
-10th percentile of the image, p99 is the 99th percentile
+10th percentile of the image, p99 is the 99th percentile.
+
 All the images that should be supported are stored in a bucket named :
 seetree-demo-open .
 Currently there are 10 images in this bucket named IMG_1.jpg, IMG_2.jpg …
