@@ -21,7 +21,7 @@ def home():
 @app.route('/health')
 def starting_url():
     # status_code = Response(status=200)
-    return render_template("index2.html")
+    return render_template("index2.html"),200
 
 #the route where all the work are done
 @app.route('/stats/<IMAGE_FILE_NAME>/<FUNC_NAME>')
@@ -30,8 +30,8 @@ def starting_work(IMAGE_FILE_NAME,FUNC_NAME):
     #Make Sure the FUNC_NAME is one of the supported function
     if FUNC_NAME != 'min' and FUNC_NAME != 'max' and FUNC_NAME != 'mean' and FUNC_NAME != 'median':
         if FUNC_NAME[0] !='p' or  not FUNC_NAME[1:].isnumeric() or int(FUNC_NAME[1:])< 0 or int(FUNC_NAME[1:]) >100:
-            return Response(status=404)
-            # return render_template("index4.html")
+            # return Response(status=404)
+            return render_template("index4.html"),404
     
     #get the picture
     url = "https://storage.googleapis.com/seetree-demo-open/{}".format(IMAGE_FILE_NAME)
@@ -40,8 +40,7 @@ def starting_work(IMAGE_FILE_NAME,FUNC_NAME):
     try:
         urllib.request.urlretrieve(url, "local-filename.jpg")
     except Exception :
-        return Response(status=404)
-        # return render_template("index4.html")
+        return render_template("index5.html")
     
     # save the img localy
     img = Image.open("local-filename.jpg")
