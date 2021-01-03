@@ -1,29 +1,29 @@
-<!DOCTYPE HTML>
 
-<html>
-	<head>
-    <title>Welcome to Mohamad Diwany site</title>
-	</head>
-	<body>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+  {% extends 'base.html' %}
 
-  
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="logo">Image Static <span>by Mohamad Diwany</span></a></div>
-			</header>
-
-		<!-- Nav -->
+  {% block content %}
+      <div class="container h-100">
+          <div class="row justify-content-center">
+              <div class="col-md-6 col-sm-12 col-xs-12 pt-5">
+                  <div class="card border-0 p-3 shadow-sm text-center">
+                      <div class="box__description-title"></div>
+          <div class="box__description-text">Welcome to seetree assignment site:<br />
+            <br />
+            <!-- Nav -->
 				<li><a href="index1.html">Home</a></li>
-				</ul>
-			</nav>
-						<header>
-							<p>Everything is ok </a></p>
-						
-						</header>
-
-
-
-	
-	</body>
-</html>
+			</ul>
+		</nav>
+					<header>
+						<p>Everything is ok </a></p>
+					
+					</header>
+          </div>
+          <p class="aligncenter">
+              <img src="http://www.quickmeme.com/img/be/be53ec34e5ec99e8699820e19f26044da1797b0160d0494f60747534a03a16af.jpg" alt="centered image" />
+          </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  {% endblock content %}
