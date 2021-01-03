@@ -48,9 +48,11 @@ IMG_10.jpg.
 
 ## Examples
 a. Request to /stats/IMG_1.jpg/min should respond with the correct min value in the
-image
-b. Request to /stats/IMG_1.jpg/average should respond with 404 error code
+image.
+
+b. Request to /stats/IMG_1.jpg/average should respond with 404 error code.
+
 c. Request to /stats/IMG_100.jpg/min should respond with 404 error code
-(assuming such image was not added to the bucket)
+(assuming such image was not added to the bucket).
 
 
