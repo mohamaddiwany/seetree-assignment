@@ -51,21 +51,21 @@ def starting_work(IMAGE_FILE_NAME,FUNC_NAME):
     #check which function is needed to work and return the correct answer
     if FUNC_NAME == 'min':
         mynew = [x[0] for x in stat.extrema]
-        return render_template("index3.html",value = mynew , text =' Min values for each band in the image is')
+        return render_template("index3.html", user_image = "local-filename.jpg" ,IMG_NAME= IMAGE_FILE_NAME , value = mynew , text =' Min values for each band in the image is')
     if FUNC_NAME == 'max':
         mynew = [x[1] for x in stat.extrema]
-        return render_template("index3.html",value = mynew , text =' Max values for each band in the image is')
+        return render_template("index3.html", user_image = "local-filename.jpg" ,IMG_NAME= IMAGE_FILE_NAME ,value = mynew , text =' Max values for each band in the image is')
     if FUNC_NAME == 'mean':
         mynew = stat.mean
-        return render_template("index3.html",value = mynew , text ='Average (arithmetic mean) pixel level for each band in the image is')
+        return render_template("index3.html", user_image = "local-filename.jpg" ,IMG_NAME= IMAGE_FILE_NAME ,value = mynew , text ='Average (arithmetic mean) pixel level for each band in the image is')
     if FUNC_NAME == 'median':
         mynew = stat.median
-        return render_template("index3.html",value = mynew , text =' Median pixel level for each band in the image is')
+        return render_template("index3.html", user_image = "local-filename.jpg" ,IMG_NAME= IMAGE_FILE_NAME ,value = mynew , text =' Median pixel level for each band in the image is')
     if FUNC_NAME[0] == 'p':
         pixels = list(img.getdata())
         mynew = np.percentile(pixels,int(FUNC_NAME[1:]))
-        return render_template("index3.html",value = mynew , text =' the {} percentile of the image is'.format(FUNC_NAME[1:]))
+        return render_template("index3.html", user_image = "local-filename.jpg" ,IMG_NAME= IMAGE_FILE_NAME ,value = mynew , text =' the {} percentile of the image is'.format(FUNC_NAME[1:]))
 
 #If we run it using seetree.py not throw flask we get it on port 80
 if __name__ == "__main__":
-    app.run(debug=True , host="127.0.0.1" , port=80)
+    app.run(debug=True , host="0.0.0.0" , port=80)
