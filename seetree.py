@@ -40,7 +40,7 @@ def starting_work(IMAGE_FILE_NAME,FUNC_NAME):
     try:
         urllib.request.urlretrieve(url, "local-filename.jpg")
     except Exception :
-        return render_template("index5.html")
+        return render_template("index5.html"),404
     
     # save the img localy
     img = Image.open("local-filename.jpg")
